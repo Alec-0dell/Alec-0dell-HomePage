@@ -1,0 +1,76 @@
+.CodingProjects {
+  background-color: #282c34;
+  flex: 1;
+}
+
+.CodingProjects-header {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-size: calc(50px + 2vmin);
+  line-height: calc(75px + 2vmin);
+  font-weight: bolder;
+  color: white;
+}
+
+.Coding-Intro-Para{
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: calc(10px + 2vmin);
+  line-height: calc(25px + 2vmin);
+}
+
+.Coding-Para{
+  color: white;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: calc(10px + 2vmin);
+  line-height: calc(25px + 2vmin);
+}
+
+.Coding-Link{
+  font-size: calc(2vmin);
+  color: lightblue;
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px;
+}
+
+.Coding-Link-Dscrp{
+  font-size: calc(2vmin);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px;
+}
+
+.Coding-Icon{
+  height: 30px;
+  width: 30px;
+  margin: calc(2vmin - 5px);
+}
+
+
+.Coding-Project-Item-Container{
+  display: flex;
+  flex-direction: row;
+}
+
+.Coding-link-Dscrp-Cnt{
+  margin-left: 20px;
+}
+
+.Coding-Container{
+  margin-left: 60px;
+  padding-bottom: 30px;
+}
+
+.Coding-Project-Container{
+  margin-left: 60px;
+}

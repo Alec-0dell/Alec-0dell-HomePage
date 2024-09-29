@@ -1,0 +1,54 @@
+.Resume {
+  background-color: #282c34;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.Resume-header {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  padding-bottom: 0px;
+  margin: 0px;
+  font-size: calc(50px + 2vmin);
+  line-height: calc(75px + 2vmin);
+  font-weight: bolder;
+  color: white;
+}
+
+.Resume-Button{
+  text-align: center;
+  color: black;
+  background-color: white;
+  border-width: 0;
+  border-radius: 10px;
+  padding: 20px;
+  text-decoration: none;
+  font-size: calc(5px + 2vmin);
+}
+
+.Resume-Para{
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px;
+  padding-bottom: 30px;
+  font-size: calc(5px + 2vmin);
+  line-height: calc(25px + 2vmin);
+}
+
+.Resume-IMG{
+  width: 80%;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+.Resume-hr{
+  visibility: hidden;
+  margin: 20px;
+}
