@@ -1,6 +1,12 @@
 import "./CodingProjects.css"
 
-function Element(props){
+interface ElementProps {
+    link?: string;
+    skills?: string;
+    description?: string;
+  }
+  
+  function Element(props: ElementProps) {
 
     return(
         <div className="Coding-link-Dscrp-Cnt">

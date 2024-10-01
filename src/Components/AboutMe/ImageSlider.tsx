@@ -1,6 +1,15 @@
 import { useState } from "react";
 
-const slideStyles = {
+// Define the type for a slide
+interface Slide {
+  url: string;
+}
+
+interface ImageSliderProps {
+  slides: Slide[];
+}
+
+const slideStyles: React.CSSProperties = {
   width: "100%",
   height: "100%",
   borderRadius: "10px",
@@ -8,7 +17,7 @@ const slideStyles = {
   backgroundPosition: "center",
 };
 
-const rightArrowStyles = {
+const rightArrowStyles: React.CSSProperties = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
@@ -19,7 +28,7 @@ const rightArrowStyles = {
   cursor: "pointer",
 };
 
-const leftArrowStyles = {
+const leftArrowStyles: React.CSSProperties = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
@@ -30,39 +39,43 @@ const leftArrowStyles = {
   cursor: "pointer",
 };
 
-const sliderStyles = {
+const sliderStyles: React.CSSProperties = {
   position: "relative",
   height: "100%",
 };
 
-const dotsContainerStyles = {
+const dotsContainerStyles: React.CSSProperties = {
   display: "flex",
   justifyContent: "center",
 };
 
-const dotStyle = {
+const dotStyle: React.CSSProperties = {
   margin: "0 3px",
   cursor: "pointer",
   fontSize: "20px",
   color: "white",
 };
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider: React.FC<ImageSliderProps> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  const goToSlide = (slideIndex) => {
+
+  const goToSlide = (slideIndex: number) => {
     setCurrentIndex(slideIndex);
   };
-  const slideStylesWidthBackground = {
+
+  const slideStylesWidthBackground: React.CSSProperties = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].url})`,
   };
@@ -79,7 +92,7 @@ const ImageSlider = ({ slides }) => {
       </div>
       <div style={slideStylesWidthBackground}></div>
       <div style={dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
+        {slides.map((_slide, slideIndex) => (
           <div
             style={dotStyle}
             key={slideIndex}

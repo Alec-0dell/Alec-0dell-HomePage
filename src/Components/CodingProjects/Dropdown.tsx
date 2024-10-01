@@ -2,7 +2,12 @@ import { useState } from 'react';
 import Arrow from './WhiteArrow.png'
 import "./CodingProjects.css"
 
-function Dropdown( props ) {
+interface DropdownProps {
+    name?: string;
+    children?: any;
+  }
+  
+  function Dropdown(props: DropdownProps) {
     const [ display, setDisplay ] = useState( 'none' )
     const [ arrowDirection, setArrowDirection] = useState(false)
 

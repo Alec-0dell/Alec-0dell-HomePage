@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AboutMe from './Components/AboutMe/AboutMe.tsx';
 import Resume from './Components/Resume/Resume.tsx';
