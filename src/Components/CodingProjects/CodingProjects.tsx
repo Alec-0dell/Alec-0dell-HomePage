@@ -1,6 +1,6 @@
 import "./CodingProjects.css"
-import { Dropdown } from './Dropdown.js'
-import { Element } from './Element.js';
+import { Dropdown } from './Dropdown.tsx'
+import { Element } from './Element.tsx';
 
 
 function CodingProjects(){
@@ -12,6 +12,81 @@ function CodingProjects(){
             <p className="Coding-Intro-Para">
                 Here are the coding projects that I have created. There are projects from highschool classes, my personal passion projects, and some from my limited time so far in the computer science program at California Polytechnic University, San Luis Obispo. 
             </p>
+            <div className='Coding-Container'>
+                <p className="Coding-Para">
+                    Drift Student Marketplace Application
+                </p>
+                <Dropdown name={"Drift Website & App"}>
+                    <Element link={"https://drift-marketplace.com"} skills={"React-Native, SQL, RESTful Api, React"} description={"Founded a start-up fighting college consumerism, helping students reuse and upcycle college essentials.Our app provides a marketplace for students to buy and sell clothes, textbooks,  dorm essentials, and more. The Center for Innovation and Entrepreneurship is helping us get funding and permission to put smart lockers on campus to facilitate the sale and exchange of items in a safe, efficient, and eco-friendly manner."}/>
+                </Dropdown>
+            </div>
+             <div className='Coding-Container'>
+                <p className="Coding-Para">
+                    CSC 203: Software Development (2024)
+                </p>
+                <Dropdown name={"CSC 203 - Project 1"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-203-Project-1"} skills={"Java"}/>
+                </Dropdown>
+                <Dropdown name={"CSC 203 - Project 2"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-203-Project-2"} skills={"Java"}/>
+                </Dropdown>
+                <Dropdown name={"CSC 203 - Project 3"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-203-Project-3"} skills={"Java"}/>
+                </Dropdown>
+                <Dropdown name={"CSC 203 - Project 4"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-203-Project-4"} skills={"Java"}/>
+                </Dropdown>
+            </div>
+            <div className='Coding-Container'>
+                <p className="Coding-Para">
+                    CSC 255: Data Structures and Algorithms (2024)
+                </p>
+                <Dropdown name={"CSC 255 - Assignment 1"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-1"} skills={"Binary"} />
+                </Dropdown>
+                <Dropdown name={"CSC 255 - Assignment 2"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-2"} skills={"Binary"} />
+                </Dropdown>
+                <Dropdown name={"CSC 255 - Assignment 3"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-3"} skills={"Assembly"} />
+                </Dropdown>
+                <Dropdown name={"CSC 255 - Assignment 4"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-4"} skills={"Assembly"} />
+                </Dropdown>
+                <Dropdown name={"CSC 255 - Assignment 5"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-5"} skills={"Assembly"} />
+                </Dropdown>
+                <Dropdown name={"CSC 255 - Assignment 6"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-6"} skills={"Assembly"} />
+                </Dropdown>
+                <Dropdown name={"CSC 255 - Assignment 7"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-7"} skills={"Systems Programming, c"} />
+                </Dropdown>
+                <Dropdown name={"CSC 255 - Assignment 8"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-225-Asgn-8"} skills={"Systems Programming, c"} />
+                </Dropdown>
+            </div>
+            <div className='Coding-Container'>
+                <p className="Coding-Para">
+                    CSC 357: Systems Programming (2024)
+                </p>
+                <Dropdown name={"CSC 357 - Assignment 1"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-357-Asgn-1"} skills={"Systems Programming, C"}/>
+                </Dropdown>
+                <Dropdown name={"CSC 357 - Assignment 2"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-357-Asgn-2"} skills={"Systems Programming, C"} />
+                </Dropdown>
+                <Dropdown name={"CSC 357 - Assignment 3"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-357-Asgn-3"} skills={"Systems Programming, C"} />
+                </Dropdown>
+                <Dropdown name={"CSC 357 - Assignment 4"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-357-Asgn-4"} skills={"Systems Programming, C"} />
+                </Dropdown>
+                <Dropdown name={"CSC 357 - Assignment 5"}>
+                    <Element link={"https://github.com/Alec-0dell/CSC-357-Asgn-5"} skills={"Systems Programming, C"}/>
+                </Dropdown>
+            </div>
+
             <div className='Coding-Container'>
                 <p className="Coding-Para">
                     'route' Student Carpooling App

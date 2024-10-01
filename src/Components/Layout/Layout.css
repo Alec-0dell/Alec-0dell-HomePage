@@ -1,102 +1,175 @@
-.Layout-Title {
-    flex: 1;
+:root {
+    --background-color: white;
+    --text-color: #282c34;
+    --link-color: white;
+    --divider-color: black;
+    --footer-bg-color: white;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #282c34;
+        --text-color: white;
+        --link-color: #282c34;
+        --divider-color: black;
+        --footer-bg-color: white;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+.Layout-Title, .Layout-Title-Footer {
     font-weight: bold;
-    display: inline;
-    background-color: white;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: #282c34;
     text-decoration: none;
     padding: 10px;
 }
 
-.Layout-Title-Footer{
-    flex: 1;
+.Layout-Title{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--text-color);
+}
+
+.Layout-Title-Footer {
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-align: center;
-    font-weight: bold;
-    background-color: white;
-    font-size: calc(10px + 2vmin);
-    color: #282c34;
-    text-decoration: none;
+    color: var(--background-color);
 }
 
 .NavBar-Container {
-    padding-top: 70;
-    align-items: 'center';
-    flex-direction: 'row';
-    justify-content: 'space-evenly';
-    width: '100%';
-    margin-bottom: 20;
-    flex: 1;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+.NavBar-Container-Inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 }
 
-.footer-container{
+.NavBar-Mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container {
     flex-direction: column;
     flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 20px 0;
 }
 
-.Layout-Link{
-    justify-content:center;
-    font-size: calc(2vmin);
-    color: #282c34;
+.copyright{
+    text-align: center;
+    font-size: calc(1vmin);
+}
+
+.Layout-Link, .footer-item {
+    justify-content: center;
     text-decoration: none;
-    font-weight: bold;
     padding: 5px;
     margin: 10px;
-}
-
-.vertical{
-    width: 2px;
-    display: inline;
-    height: 100%;
-    margin: 10px;
-    color: black;
-    background-color: black;
-    orientation: vertical;
-}
-
-.hr{
-    visibility: hidden;
-}
-
-.hr-grey{
-    width: 70%;
-}
-.hr-grey-smaller{
-    width: 50%;
-}
-
-.hamburger{
-    display: inline;
-    z-index: 6;
-    float: right;
-}
-
-.vertical-last{
-    width: 2px;
-    margin: 10px;
-    display: inline;
-    height: 100%;
-    margin: 10px;
-    color: white;
-    orientation: vertical;
-    float: right;
+    background-color: transparent;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .footer-item{
-    justify-content:center;
-    display: block;
-    text-align: center;
-    font-size: calc(2vmin);
-    color: #282c34;
-    text-decoration: none;
-    font-weight: normal;
-    margin: 3px;
-  }
+    color: var(--background-color);
+    font-size: calc(1.5vmin);
+}
 
-.contact-info{
+.Layout-Link{
+    font-weight: bold;
     font-size: calc(2vmin);
+    color: var(--text-color);
+}
+
+.footer-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Layout-Link:hover, .footer-item:hover {
+    background-color: var(--link-color-hover);
+}
+
+
+.vertical {
+    width: 0.5px;
+    height: 30px;
+    border-color: var(--text-color);
+    background-color: var(--text-color) ;
+    color: var(--text-color); 
+    margin: 0 10px; 
+}
+
+
+.hr {
+    visibility: hidden;
+}
+
+.hr-grey, .hr-grey-smaller {
+    background: #ccc;
+}
+
+.hr-grey-bigger {
+    width: 70%;
+}
+.hr-grey {
+    width: 60%;
+}
+
+.hr-grey-smaller {
+    width: 50%;
+}
+
+.hamburger {
+    display: flex;
+    align-items: center; 
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+.hamburger-icon {
+    width: 35px;
+    height: 3px; 
+    color: var(--text-color);
+    background-color: var(--text-color);
+    margin: 6px 0;
+}
+
+/* Footer contact info */
+.contact-info {
+    font-size: calc(1.5vmin);
     margin: 6px;
     text-align: center;
-    font-weight: bolder;
 }

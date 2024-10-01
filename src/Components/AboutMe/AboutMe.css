@@ -1,40 +1,69 @@
+:root {
+  --background-color: #282c34;
+  --text-color: white;
+  --header-font-size: calc(50px + 2vmin);
+  --para-font-size: calc(10px + 2vmin);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+  }
+}
+
+/* General Styles */
 .AboutMe {
-  background-color: #282c34;
+  background-color: var(--background-color);
+  color: var(--text-color);
   flex: 1;
   justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .AboutMe-header {
   text-align: center;
-  align-items: center;
-  justify-content: center;
   padding: 40px;
-  margin: 0px;
-  padding-bottom: 20px;
-  font-size: calc(50px + 2vmin);
+  margin: 0;
+  font-size: var(--header-font-size);
   line-height: calc(75px + 2vmin);
   font-weight: bolder;
-  color: white;
+  color: var(--text-color);
+  animation: fadeIn 1s ease-in;
 }
 
-.AboutMe-Intro-Para{
-  justify-content: center;
+.AboutMe-Intro-Para, .AboutMe-Para {
+  background-color: transparent;
+  color: var(--text-color);
   text-align: center;
-  color: white;
+  font-size: var(--para-font-size);
+  line-height: calc(25px + 2vmin);
   margin-left: 30px;
   margin-right: 30px;
-  font-size: calc(10px + 2vmin);
-  line-height: calc(25px + 2vmin);
+  padding: 30px;
+  animation: fadeIn 1.5s ease-in;
 }
 
-.AboutMe-Para{
-  justify-content: center;
-  text-align: center;
-  color: white;
-  margin-left: 40px;
-  margin-right: 40px;
-  padding: 30px;
+.AboutMe-Para {
   padding-bottom: 60px;
   font-size: calc(5px + 2vmin);
-  line-height: calc(25px + 2vmin);
+}
+
+.AboutMe .containerStyles {
+  width: 80%;
+  height: 560px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  max-width: 1000px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

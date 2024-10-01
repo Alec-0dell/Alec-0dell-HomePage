@@ -1,73 +1,94 @@
-.Home {
-  background-color: #282c34;
+:root {
+  --background-color: #282c34;
+  --text-color: white;
+  --header-font-size: calc(50px + 2vmin);
+  --para-font-size: calc(10px + 2vmin);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1e1e1e;
+    --text-color: #ffffff;
+  }
+}
+
+/* General styles */
+.Home, .Home-mobile {
+  background-color: var(--background-color);
+  color: var(--text-color);
   flex: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.Home {
   flex-direction: row;
+}
+
+.Home-mobile {
+  flex-direction: column;
+  padding: 20px;
 }
 
 .Home-header {
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  font-size: calc(50px + 2vmin);
+  font-size: var(--header-font-size);
   line-height: calc(75px + 2vmin);
   font-weight: bolder;
-  color: white;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in;
 }
 
-.Intro-Photo{
-  display: inline;
-  object-fit: scale-down;
-}
-
-.Intro-Para{
-  width: 50%;
-  padding: 20px;
-  justify-content: center;
+.Intro-Para, .Mobile-Intro-Para {
+  background-color: transparent;
+  color: var(--text-color);
+  width: 80%;
   text-align: center;
-  display: inline;
-  color: white;
-  font-size: calc(10px + 2vmin);
+  font-size: var(--para-font-size);
   line-height: calc(25px + 2vmin);
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in;
 }
 
-.Intro-Body{
-  width: 50%;
+.Intro-Body, .Mobile-Intro-Body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.pic-contianer{
-  width: 50%;
-  justify-content: center;
-  text-align: center;
-}
-
-
-.Mobile-Intro-Body{
+.pic-container {
+  background-color: var(--background-color);
+  color: var(--text-color);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.Mobile-Intro-Para{
   padding: 20px;
-  justify-content: center;
-  text-align: center;
-  display: inline;
-  color: white;
-  font-size: calc(10px + 2vmin);
-  line-height: calc(25px + 2vmin);
+  animation: fadeIn 2s ease-in;
 }
 
-.Home-mobile{
-  background-color: #282c34;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.profile-pic {
+  width: 100%;
+
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
