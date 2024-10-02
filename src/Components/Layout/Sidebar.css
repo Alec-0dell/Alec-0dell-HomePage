@@ -38,15 +38,17 @@
   background: grey;
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  right: clamp(44px, calc(4vmin), 100px) !important;
+  top: calc(4vmin) !important;        
+  z-index: 1;  
 }
 
-/* Color/shape of close button cross */
+/* Style for the cross itself */
 .bm-cross {
-  background: #bdc3c7;
+  width: 3px !important;
+  height: 18px !important;
+  background: var(--background-color);
 }
 
 /*
@@ -55,25 +57,27 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .bm-menu-wrap {
   position: fixed;
+  text-align: right;
   height: 100%;
+  top: 0;
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: #bfc1c9;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+  padding: 3.5em 1.5em 0;
+  font-size: clamp(14px, calc(1.5vmin), 24px);
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: #373a47;
+  padding-top: 15px;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
-  padding: 0.8em;
 }
 
 /* Individual item */
