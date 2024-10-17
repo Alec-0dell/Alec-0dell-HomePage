@@ -1,5 +1,5 @@
 import "./Resume.css";
-import ResumeImg from "./ResumeBig.jpg";
+import ResumeImg from "./ResumeBig1.jpg";
 
 function Resume() {
   const downloadFile = (url: string) => {
